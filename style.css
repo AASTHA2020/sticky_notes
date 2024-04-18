@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Styling for individual note */
+.note{
+    padding:20px; /* Add padding */
+    box-shadow: 5px 8px 10px rgb(97, 97, 97); /* Add box shadow */
+    width: auto; /* Set width to auto */
+    min-width:200px; /* Set minimum width */
+    max-width: 200px; /* Set maximum width */
+    min-height: 200px; /* Set minimum height */
+    margin:20px; /* Add margin */
+    position: relative; /* Set position to relative */
+    transform: rotate(15deg); /* Rotate the note */
+    transition: all .6s linear; /* Add transition effect */
+}
+
+/* Container for notes */
+#notes-container{
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Wrap notes if they exceed container width */
+}
+
+/* Styling for the section containing notes */
+section{
+    background:url("bg_sticky.jpg"); /* Set background image */
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat background */
+    background-position: center; /* Center the background image */
+    min-height:100vh; /* Set minimum height to full viewport height */
+    padding:50px 20px; /* Add padding */
+}
+
+/* Styling for the form to add new notes */
+.add-note{
+    display:flex; /* Use flexbox for layout */
+    gap:30px; /* Add gap between elements */
+    flex-wrap: wrap; /* Wrap elements if they exceed container width */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Styling for input field to add new note */
+#input{
+    padding:15px; /* Add padding */
+    border-radius:30px; /* Add border radius */
+    width:600px; /* Set width */
+}
+
+/* Styling for buttons */
+#add-note-btn ,#saveEdit{
+    padding:15px 30px; /* Add padding */
+    background-color: rgb(10, 10, 10); /* Set background color */
+    color:white; /* Set text color */
+    border-radius: 30px; /* Add border radius */
+}
+
+/* Styling for color picker */
+#color{
+    height:50px; /* Set height */
+
+}
+
+/* Styling for delete and edit icons */
+#delete{
+    position: absolute; /* Set position to absolute */
+    right:12px; /* Add right spacing */
+    bottom:12px; /* Add bottom spacing */
+}
+
+.edit{
+    position: absolute; /* Set position to absolute */
+    right:35px; /* Add right spacing */
+    bottom:12px; /* Add bottom spacing */
+}
+
+/* Hover effect on notes */
+.note:hover{
+    transform: rotate(0deg); /* Remove rotation on hover */
+}
+
+/* Style for the edit note textarea */
+#edit-note{
+    display: none; /* Hide edit note textarea by default */
+    background-color:white ; /* Set background color */
+    max-width: 250px; /* Set maximum width */
+}
+
+#edit-text{
+    border:none; /* Remove border */
+    outline:none; /* Remove outline */
+}
+
+
+/* Style for textarea */
+textarea{
+    background:transparent; /* Set background to transparent */
+    border:none; /* Remove border */
+    outline: none; /* Remove outline */
+    text-align: center; /* Center text */
+    font-family: sans-serif; /* Set font family */
+    padding:3px; /* Add padding */
+}
+
+/* Style for header */
+h1{
+    text-align: center; /* Center text */
+    font-style: italic; /* Set font style */
+    margin:20px; /* Add margin */
+    font-size: 34px; /* Set font size */
+}
+
+/* CSS code for the greeting message */
+.greeting {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(104, 81, 81, 0.062); /* Semi-transparent background */
+    color: rgb(15, 9, 9); /* Text color */
+    padding: 10px; /* Padding around the message */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Make the text bold */
+    font-size: 20px;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+
+textarea:disabled {
+    color: black; /* Set text color to black for disabled textareas */
+}
+
+
